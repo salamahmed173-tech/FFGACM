@@ -1,7 +1,6 @@
 [build]
-  # Removed Python build command because the HTML and images are already statically generated.
-  # This makes deployments instant.
-  command = ""
+  # Provide a valid no-op command so Netlify doesn't fail with exit code 2
+  command = "echo 'Static site ready'"
   publish = "."
 
 [[headers]]
