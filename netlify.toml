@@ -1,0 +1,9 @@
+[build]
+  # Netlify will run this command to generate the latest charts and CSVs before publishing
+  command = "pip install -r requirements.txt && python analysis.py"
+  publish = "."
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"

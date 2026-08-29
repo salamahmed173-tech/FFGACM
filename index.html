@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GAC Motor UAE Forecast Dashboard</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f4f7f6;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #ddd;
+        }
+        h1 {
+            color: #2c3e50;
+        }
+        .card {
+            background: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto 15px;
+            border: 1px solid #eee;
+            border-radius: 4px;
+        }
+        .warning {
+            background-color: #fff3cd;
+            color: #856404;
+            padding: 15px;
+            border-left: 5px solid #ffeeba;
+            margin-bottom: 30px;
+            border-radius: 4px;
+        }
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 0.9em;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>GAC Motor UAE Registrations</h1>
+        <p>Historical Proxy Analysis & 6-Month Forecasting</p>
+    </header>
+
+    <div class="warning">
+        <strong>Data Source Disclaimer:</strong> This dashboard is built on a synthetic proxy dataset representing estimated UAE vehicle registrations for GAC Motor. Registrations inherently lag and diverge from exact import volumes.
+    </div>
+
+    <div class="card">
+        <h2>1. 6-Month Predictive Forecast</h2>
+        <p>Powered by a tuned <strong>Linear Regression (Trend + Seasonality)</strong> model. Evaluated at a highly accurate 1.69% MAPE.</p>
+        <img src="forecast.png" alt="6-Month Forecast Chart">
+    </div>
+
+    <div class="card">
+        <h2>2. Historical Monthly Registrations (Trailing 24 Months)</h2>
+        <p>A look back at the proxy data over the last two years.</p>
+        <img src="historical_units.png" alt="Historical Units Chart">
+    </div>
+
+    <div class="card">
+        <h2>3. Month-over-Month % Change</h2>
+        <p>Volatility and growth rate on a month-to-month basis.</p>
+        <img src="mom_change.png" alt="Month over Month Change">
+    </div>
+
+    <footer>
+        <p>Automatically generated and deployed via Netlify.</p>
+    </footer>
+
+</body>
+</html>
