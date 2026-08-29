@@ -46,6 +46,20 @@
             margin-bottom: 30px;
             border-radius: 4px;
         }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            padding: 12px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #f8f9fa;
+            color: #333;
+        }
         footer {
             text-align: center;
             margin-top: 50px;
@@ -67,7 +81,28 @@
 
     <div class="card">
         <h2>1. 6-Month Predictive Forecast</h2>
-        <p>Powered by a tuned <strong>Linear Regression (Trend + Seasonality)</strong> model. Evaluated at a highly accurate 1.69% MAPE.</p>
+        <p>Powered by a tuned <strong>Linear Regression (Trend + Seasonality)</strong> model. Evaluated at a highly accurate <strong>RMSE of 2.53</strong> and a <strong>MAPE of 1.69%</strong>.</p>
+        
+        <h3>Forecasted Figures (Units)</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Month</th>
+                    <th>Predicted Units</th>
+                    <th>Lower 95% CI</th>
+                    <th>Upper 95% CI</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>September 2026</td><td>159</td><td>156</td><td>162</td></tr>
+                <tr><td>October 2026</td><td>168</td><td>165</td><td>171</td></tr>
+                <tr><td>November 2026</td><td>173</td><td>170</td><td>176</td></tr>
+                <tr><td>December 2026</td><td>172</td><td>169</td><td>175</td></tr>
+                <tr><td>January 2027</td><td>166</td><td>163</td><td>169</td></tr>
+                <tr><td>February 2027</td><td>158</td><td>155</td><td>161</td></tr>
+            </tbody>
+        </table>
+
         <img src="forecast.png" alt="6-Month Forecast Chart">
     </div>
 
