@@ -1,6 +1,7 @@
 [build]
-  # Netlify will run this command to generate the latest charts and CSVs before publishing
-  command = "pip install -r requirements.txt && python analysis.py"
+  # Removed Python build command because the HTML and images are already statically generated.
+  # This makes deployments instant.
+  command = ""
   publish = "."
 
 [[headers]]
